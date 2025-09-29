@@ -1,7 +1,7 @@
 import React from 'react';
-import { BarChart3, Linkedin, Twitter, Instagram, Mail, Phone, MapPin } from 'lucide-react';
+import { Linkedin, Twitter, Instagram, Mail, Phone, MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
+import logo from '../assets/logo.png'; 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
@@ -12,10 +12,9 @@ const Footer = () => {
           {/* Brand Section */}
           <div className="lg:col-span-1">
             <Link to="/" className="flex items-center space-x-3 mb-4">
-              <div className="p-2 bg-gradient-to-r from-[#0A2540] to-[#008080] rounded-lg">
-                <BarChart3 className="h-6 w-6 text-white" />
-              </div>
-              <span className="text-xl font-bold">Think Success Consultancy</span>
+              <img src={logo} alt="Think Success Logo" className="h-10 w-10 object-contain" />
+<span className="text-xl font-bold">Think Success Consulting</span>
+
             </Link>
             <p className="text-gray-300 mb-6 leading-relaxed">
               Empowering Analysts to Excel

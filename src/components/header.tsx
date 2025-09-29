@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 // import { Menu, X, BarChart3 } from 'lucide-react';
 import { Menu, X } from 'lucide-react';
-import logo from '../assets/logo.png'; // ✅ import your image
+import logo from '../assets/logo.png'; 
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -36,7 +36,7 @@ const Header = () => {
               alt="Think Success Logo"
               className="h-10 w-10 rounded-lg group-hover:scale-105 transition-transform"
             />
-            <span className="text-xl font-bold text-[#333333]">Think Success Consultancy</span>
+            <span className="text-xl font-bold text-[#333333]">Think Success Consulting</span>
           </Link>
 
           {/* Desktop Navigation */}
