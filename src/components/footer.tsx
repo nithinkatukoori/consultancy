@@ -1,7 +1,8 @@
 import React from 'react';
-import { Linkedin, Twitter, Instagram, Mail, Phone, MapPin } from 'lucide-react';
+import { Linkedin, Twitter, Instagram, Mail, Phone, MapPin, Clock } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import logo from '../assets/logo.png'; 
+
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
@@ -13,8 +14,7 @@ const Footer = () => {
           <div className="lg:col-span-1">
             <Link to="/" className="flex items-center space-x-3 mb-4">
               <img src={logo} alt="Think Success Logo" className="h-10 w-10 object-contain" />
-<span className="text-xl font-bold">Think Success Consulting</span>
-
+              <span className="text-xl font-bold">Think Success Consulting</span>
             </Link>
             <p className="text-gray-300 mb-6 leading-relaxed">
               Empowering Analysts to Excel
@@ -64,19 +64,42 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h3 className="font-semibold text-lg mb-4">Contact Info</h3>
-            <div className="space-y-3">
-              <div className="flex items-center space-x-3">
-                <Mail size={16} className="text-[#008080]" />
-                <span className="text-gray-300">[Your Email Here]</span>
+            <h3 className="font-semibold text-lg mb-4">Get in Touch</h3>
+            <div className="space-y-4 text-gray-300">
+              <div className="flex items-start space-x-3">
+                <Mail size={16} className="text-[#008080] mt-1" />
+                <div>
+                  <p>thinksuccessITconsultants@gmail.com</p>
+                  <p className="text-sm text-gray-400">We respond within 24 hours.</p>
+                </div>
               </div>
-              <div className="flex items-center space-x-3">
-                <Phone size={16} className="text-[#008080]" />
-                <span className="text-gray-300">[Your Phone Here]</span>
+
+              <div className="flex items-start space-x-3">
+                <Phone size={16} className="text-[#008080] mt-1" />
+                <div>
+                  <p>+91 80084 38080</p>
+                  <p className="text-sm text-gray-400">Mon–Fri, 9:00 AM – 6:00 PM (IST)</p>
+                  <p className="text-sm text-gray-400">US hours available on request</p>
+                </div>
               </div>
-              <div className="flex items-center space-x-3">
-                <MapPin size={16} className="text-[#008080]" />
-                <span className="text-gray-300">[Your Address Here]</span>
+
+              <div className="flex items-start space-x-3">
+                <MapPin size={16} className="text-[#008080] mt-1" />
+                <div>
+                  <p>North Carolina (USA) </p>
+                  <p>Chicago (USA) </p>
+                  <p>Hyderabad (India)</p>
+                  <p className="text-sm text-gray-400">By appointment only</p>
+                </div>
+              </div>
+
+              <div className="flex items-start space-x-3">
+                <Clock size={16} className="text-[#008080] mt-1" />
+                <div>
+                  <p>Monday – Friday</p>
+                  <p className="text-sm text-gray-400">9:00 AM – 6:00 PM (IST)</p>
+                  <p className="text-sm text-gray-400">US availability by appointment (EST/CDT)</p>
+                </div>
               </div>
             </div>
           </div>
@@ -85,7 +108,7 @@ const Footer = () => {
         {/* Social Links and Copyright */}
         <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col sm:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm">
-            Copyright © {currentYear} [Consultancy Name]. All rights reserved.
+            © {currentYear} Think Success Consulting. All rights reserved.
           </p>
           <div className="flex space-x-4 mt-4 sm:mt-0">
             <a href="#" className="text-gray-400 hover:text-[#008080] transition-colors">
