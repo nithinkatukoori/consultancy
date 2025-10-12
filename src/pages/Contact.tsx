@@ -17,27 +17,24 @@ const Contact = () => {
     });
   };
 
- const handleSubmit = async (e: React.FormEvent) => {
+ const handleSubmit = async (e) => {
   e.preventDefault();
 
-  try {
-    const res = await fetch('/api/sendEmail', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(formData),
-    });
+  const res = await fetch("/api/sendEmail", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ name, email, message }),
+  });
 
-    if (res.ok) {
-      setIsSubmitted(true);
-      setFormData({ name: '', email: '', phone: '', message: '' });
-    } else {
-      alert('Failed to send message. Please try again.');
-    }
-  } catch (error) {
-    console.error(error);
-    alert('Something went wrong!');
+  const data = await res.json();
+
+  if (data.success) {
+    alert("Message sent successfully!");
+  } else {
+    alert("Failed to send message. Please try again.");
   }
 };
+
 
 
   return (
@@ -284,18 +281,7 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* Map Section */}
-      <section className="h-96 bg-gray-200">
-        <div className="w-full h-full flex items-center justify-center text-gray-500">
-          <div className="text-center">
-            <MapPin size={48} className="mx-auto mb-2" />
-            <p className="text-lg">Interactive Map Would Go Here</p>
-            <p className="text-sm">
-              North Carolina (USA) • Chicago (USA) • Hyderabad (India)
-            </p>
-          </div>
-        </div>
-      </section>
+     
     </div>
   );
 };
